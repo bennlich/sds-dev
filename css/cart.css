@@ -1,0 +1,64 @@
+/* Cart stuff */
+
+/* TODO: determine min-width based on wrapper content */
+.cart-button-wrapper {
+  position: absolute;
+  min-width: 121px;
+  right: 4px;
+  top: 0px;
+}
+
+.cart-input {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  text-align: center;
+  margin: 2px 0px;
+  cursor: pointer;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 12pt;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+}
+
+.cart-purchase-button {
+  border: 1px solid;
+  opacity: 0.25;
+  transition: 0.2s linear opacity;
+}
+
+.cart-purchase-button:hover {
+  opacity: 1;
+}
+
+.cart-option {
+  border: 1px solid black;
+}
+
+#shopping-cart {
+  position: absolute;
+  display: flex;
+  top: 15px;
+  right: 15px;
+  transition: 0.2s linear opacity;
+}
+
+#shopping-cart.ready {
+  opacity: 0.25;
+}
+
+#shopping-cart.hidden {
+  display: none;
+}
+
+#shopping-cart.ready:hover {
+  opacity: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#cart-quantity {
+  display: inline-block;
+  font-size: 14px;
+  margin: auto 8px;
+}

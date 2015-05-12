@@ -1,0 +1,73 @@
+/* Nav bar styles */
+
+#superduperstudio {
+  display: inline-block;  
+  height: 144px;
+  width: 150px;
+  overflow: visible;
+}
+
+.navText {
+  position: relative;
+}
+
+.glyphBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -55px;
+  margin-top: -55px;
+  width: 111px;
+  height: 111px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-flex-pack: center;
+  z-index: -10;
+  overflow: visible;
+}
+
+.glyphBoxSM {
+  position: absolute;
+  left: 0px;
+  height: 26px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-flex-pack: center;
+  z-index: -10;
+  overflow: visible;
+}
+
+.glyph {
+  width: 111px;
+  height: 111px;
+  stroke: #000;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-flex-pack: center;
+  overflow: visible;
+}
+
+.flex-filler {
+  flex-grow: 1;
+}
+
+.nav-wrapper {
+  display: flex;
+  width: 100%;
+  margin-left: 134px;
+}

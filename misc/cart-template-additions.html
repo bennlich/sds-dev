@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html id="fc">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{{ config.store_name }} Cart</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <!--[if lt IE 9 ]>
+        <script type="text/javascript">
+            var IEElms = ['article', 'aside', 'header', 'main', 'nav', 'section'];
+            for (var i = 0; i < IEElms.length; i++) {
+                document.createElement(IEElms[i]);
+            };
+        </script>
+    <![endif]-->
+    <link href="{{ config.css_file }}" rel="stylesheet" media="screen">
+    <!-- FC script insertion -->{{ fc_header_content|raw }}<!-- /FC script insertion -->
+    <!--[if lt IE 9 ]>
+        <script src="{{ config.cdn_static_path }}scripts/respond/respond.1.4.2.js" charset="utf-8"></script>
+        <style>
+            #fc label.fc-form-label--with-placeholder {
+                display:block !important;
+                left:0 !important;
+                width:auto !important;
+                height:50px !important;
+                clip:auto !important;
+                position:relative !important;
+                text-align:left !important;
+            }
+        </style>
+    <![endif]-->
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        .fc-cart__title__header {
+            font-family: "Roboto Condensed", sans-serif !important;
+            font-weight: 300 !important;
+            text-shadow: none !important;
+            color: black !important;
+            font-size: 22px !important;
+        }
+
+        .fc-transaction__header {
+            font-family: "Roboto Condensed", sans-serif !important;
+            font-weight: 300 !important;
+            text-shadow: none !important;
+            text-align: left !important;
+            color: black !important;
+        }
+
+        #fc #fc-cart--responsive .fc-cart__item__price {
+            padding-left: 0px !important;
+        }
+
+        p.fc-cart__item__price__each {
+            color: black !important;
+        }
+
+        .fc-order-quantity, .fc-cart__items, .fc-cart__item__details,
+        .fc-cart__item__options, .fc-cart__item__option__name,
+        .fc-cart__item__option__value, .fc-cart__item__option__value__unit,
+        .fc-cart__item__remove > a, .fc-button, .fc-cart__items__header div,
+        .fc-shipping-rates__rate__name, .fc-shipping-rates__rate__value,
+        .title, .fc-messages__empty-notification, .fc-messages__empty-notification > a,
+        .fc-postal-code-entry__loading__text, .fc-transaction__shipping-address,
+        .fc-coupon__name, .fc-coupon__code, .fc-subtotal__value,
+        .fc-subtotal--shipping .fc-subtotal--row .fc-subtotal__label {
+            font-family: "Roboto Slab", serif !important;
+            font-weight: 300 !important;
+            text-shadow: none !important;
+            color: black !important;
+        }
+
+        .fc-shipping-rates__rate__value {
+            text-align: right !important;
+            font-style: normal !important;
+            padding-top: 3px !important;
+        }
+
+        .fc-cart__item__name, .fc-cart__item__total, .fc-cart__item__total > p,
+        .fc-address-entry > h4, h5,
+        .fc-action--checkout--button, .fc-subtotal__label,
+        .fc-transaction__ui__toggle.fc-button, #fc .fc-transaction__total .fc-subtotal__value {
+            font-family: "Roboto Slab", serif !important;
+            font-weight: 500 !important;
+            text-shadow: none !important;
+            text-transform: uppercase !important;
+            color: black !important;
+        }
+
+        .fc-cart__items__header.fc-container__row {
+            border-right: none !important;
+            border-bottom: 1px solid #aaa !important;
+            background: white !important;
+        }
+
+        .fc-sidebar.fc-sidebar--cart {
+            border-left: 1px solid #aaa !important;
+            background: white !important;
+        }
+
+        .fc-cart__item__quantity__input, .fc-button, input[type="text"],
+        select {
+            border: 1px solid black !important;
+            border-radius: 0px !important;
+            background: white !important;
+            font-family: "Roboto Slab", serif !important;
+            font-weight: 300 !important;
+            color: black !important;
+            text-decoration: none !important;
+        }
+
+        .fc-button--cancel {
+            opacity: 0.6;
+            border: none !important;
+            transition: opacity 0.1s linear;
+        }
+
+        .fc-button--cancel:hover {
+            opacity: 1.0;
+        }
+
+        .fc-action--checkout--button, .fc-action--checkout--button:hover {
+            border: 1px solid black !important;
+            border-radius: 0px !important;
+            background: white !important;
+            color: black !important;
+        }
+
+        .fc-shipping-rates__rate__name, .fc-shipping-rates__rate__value {
+            font-size: 12px !important;
+        }
+
+        #fc body {
+            background: white !important;
+        }
+
+        .fc-cart-container.fc-cart__main {
+            border: 1px solid #aaa !important;
+            border-radius: 0px !important;
+        }
+
+        #fc-logo {
+            position: relative !important;
+            top: 4px !important;
+            width: 75% !important;
+            border-bottom: 1px solid #aaa !important;
+            border-style: solid !important;
+            padding: 13px 3px !important;
+        }
+
+        .fc-address-entry {
+            padding-top: 11px !important;
+        }
+
+        .fc-address-entry h4 {
+            font-size: 13px !important;
+            padding-bottom: 10px !important;
+        }
+
+        .fc-cancel-continue-shopping.fc-container__grid {
+            padding-right: 0px !important;
+        }
+
+        .fc-transaction__shipping-address {
+            padding: 0px !important;
+            border: none !important;
+        }
+
+        #fc .fc-transaction__ui__header,
+        #fc .fc-transaction__total .fc-subtotal__label,
+        #fc .fc-transaction__total .fc-subtotal__value,
+        #fc .fc-transaction__subtotal.fc-transaction__section h5 {
+            font-size: 14px !important;
+        }
+
+        #fc .fc-transaction, #fc .fc-subtotal__label,
+        .fc-subtotal--row .fc-subtotal__value {
+            font-size: 12px !important;
+        }
+
+        #fc .fa-lock, #fc .fa-truck {
+            fill: #000 !important;
+        }
+
+        #fc .fc-coupon-entry__apply {
+            left: 0px !important;
+        }
+
+        #fc .fc-messages__empty-notification {
+            background-color: white !important;
+        }
+
+        #fc .fc-postal-code-entry__loading {
+            background-color: white !important;
+        }
+
+        #fc .fc-cart__item__details {
+            margin-left: 12px !important;
+        }
+
+        #fc .fc-cart__item__image__img {
+            border-radius: 0px !important;
+        }
+
+        #fc #fc-cart--responsive .fc-cart__item__image {
+            padding-right: 0px !important;
+        }
+
+        #fc #fc-cart--responsive .fc-cart__item__total {
+            padding-left: 15px !important;
+        }
+
+        #fc .fc-sidebar--cart .fc-actions--payment {
+            padding: 15px 15px 0px 15px !important;
+        }
+
+    </style>
+</head>
+<body class="fc-context--cart-fullpage" data-fc-context='{"cart_is_fullpage":true}'>
+
+    {% set cart_is_fullpage = true %}
+    <div data-fc-container="cart">
+        {% embed 'cart.inc.twig' %}
+        {% endembed %}
+    </div>
+
+
+
+    <!-- FC footer script insertion -->{% include template_from_string(fc_footer_content) %}<!-- /FC footer scripts -->
+</body>
+</html>
