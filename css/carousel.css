@@ -140,11 +140,11 @@ have a fixed width and height (but it's not required).
 .carouselArrowsLeft {
   cursor: pointer;
   position: absolute;
-  left: 0px;
+  left: 20px;
 }
 
 .carouselArrowsRight {
   cursor: pointer;
   position: absolute;
-  right: 0px;
+  right: 20px;
 }
