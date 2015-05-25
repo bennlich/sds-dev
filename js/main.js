@@ -22,7 +22,14 @@ function initCarousel() {
       interval: 4000,
       target: '+=1',
       autostart: false
-    });
+    })
+    
+  $('.images-and-video').hover(
+    function() { $(".carouselArrows").fadeIn(200); },
+    function() { $(".carouselArrows").fadeOut(200); }
+  );
+
+  $('.carouselArrows').delay(2000).fadeOut(200);
 }
 
 function loadHTMLs() {
