@@ -3,7 +3,7 @@
 var HTMLs = {
 };
 
-function initCarousel(){
+function initCarousel() {
 	$('.jcarousel')
     .on('jcarousel:create jcarousel:reload', function() {
       var element = $(this),
@@ -24,6 +24,7 @@ function initCarousel(){
       autostart: false
     });
 }
+
 function loadHTMLs() {
 	$.when(
 		$.get('partials/backdrop.html'),
@@ -63,16 +64,16 @@ function loadHTMLs() {
 		});
 }
 
-function prev(){
+function prev() {
  	$('.jcarousel').jcarousel('scroll', '-=1');
 }
 
-function next(){
+function next() {
  	$('.jcarousel').jcarousel('scroll', '+=1');
 }
 var random = null;
 
-function nav(){
+function nav() {
   $.get('partials/nav.html', function(data) {
   	navHTML = data;
   	$('#nav').html(navHTML);
@@ -85,7 +86,7 @@ var mainDrawings = ["Pics/logo1.svg", "Pics/logo2.svg", "Pics/logo3.svg"];
 var backgroundIMGs = ["Pics/Splash/Saturn_v2.jpg"];
 var mainDrawing = null;
 var bI = null;
-function selectDrawing(){
+function selectDrawing() {
 	random = 1+Math.floor(Math.random()*3);
 	mainDrawing = mainDrawings[random-1];
 	bI = backgroundIMGs[Math.floor(Math.random()*backgroundIMGs.length)];
@@ -94,7 +95,7 @@ function selectDrawing(){
 	console.log(random, mainDrawings[random], "re-rolled");
 }
 
-function preloader(){
+function preloader() {
 	// if (colorSwitch == false){
 	selectDrawing();
 	// }
@@ -171,14 +172,14 @@ function preloader(){
   nav();
   console.log("loaded");
 };
-function showDrawing(){
+function showDrawing() {
 	$("#draw").attr('src', mainDrawing);
 	$(".drawing").css({ opacity: 1 });
 	console.log("mainDrawn");
 	$("#backgroundIMG").attr('src', bI);
 	console.log("backgrounded");
 }
-function preloadProj(){
+function preloadProj() {
 	// if (colorSwitch == false){
 		random = 1+Math.floor(Math.random()*3);
 		var mainDrawing = mainDrawings[random-1];
@@ -220,7 +221,7 @@ function preloadProj(){
 
 // var glyphDrawings = ["Pics/g1.svg", "Pics/g2.svg", "Pics/g3.svg"];
 var gD = null;
-function glyphRandomizer () {
+function glyphRandomizer() {
 	if (random == 1){
 		gD = glyphs[Math.floor(Math.random()*3)];
 	}
@@ -233,7 +234,7 @@ function glyphRandomizer () {
 	$(".glyphIMG").attr('src', gD);
 }
 var gDSM = null;
-function glyphRandomizerSM () {
+function glyphRandomizerSM() {
 	if (random == 1){
 		gDSM = glyphsSM[Math.floor(Math.random()*3)];
 	}
@@ -264,11 +265,11 @@ var previewIMGs = [
 	"Pics/ProcessDrawings/preview.jpg"
 ];
 var p = null;
-function previewStart(){
+function previewStart() {
 	// randPrev = glyphs[Math.floor(Math.random()*preview2DIMGs.length)];
 	$(".preview").attr('src', mainDrawing);
 }
-function preview(p){
+function preview(p) {
 	$(".preview").attr('src', previewIMGs[p-1]);
 	$(".preview").css({ opacity: 1 });
 	// var gD = glyphsSM[Math.floor(Math.random()*3)];
@@ -283,7 +284,7 @@ function preview(p){
 var previewArchiveIMGs = ["Pics/blogPreview.svg", "Pics/Flags/preview.jpg", "Pics/Frog/preview.jpg", "Pics/Pluto/preview.jpg", "Pics/Saturn/preview.jpg", "Pics/Bridge/preview.jpg"];
 var p = null;
 
-function previewArchive(p){
+function previewArchive(p) {
 	$(".preview").attr('src', previewArchiveIMGs[p-1]);
 	$(".preview").css({ opacity: 1 });
 	$("#"+p).css({ opacity: 1 });
@@ -292,7 +293,7 @@ function previewArchive(p){
 	console.log(p);
 };
 
-function hide(p){
+function hide(p) {
 	glyphRandomizer();
 	glyphRandomizerSM();
 	$(".drawing").css({ opacity: 1 });
