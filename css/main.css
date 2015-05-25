@@ -2,9 +2,6 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 400;
   letter-spacing: 1.2px;
-  width: 100%;
-  max-width: 1224px;
-  min-width: 1000px;
   font-size: 14pt;
   color: #000000;
   margin: auto;
@@ -13,6 +10,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 0px 60px;
 }
 
 #background {
@@ -38,12 +36,28 @@ body {
 
 #everything {
   position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
+  margin: 18px auto;
+}
+
+#main {
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 20px;
+}
+
+#mainWORK {
+  margin: 0px auto;
+}
+
+/* 1078px + 2 * 60px padding */
+@media (min-width: 1198px) {
+  #everything {
+    width: 1078px;
+  }
+
+  #mainWORK {
+    width: 1030px;
+  }
 }
 
 Med {
@@ -79,27 +93,6 @@ a:hover {
   text-decoration: underline;
 }
 
-#nav a:link, #nav a:visited {
-  color: #000000;
-}
-
-#nav {
-  position: absolute;
-  display: inline;  
-  width: 1078px;
-  top:18px;
-  left:58px;
-  float: left;
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  overflow: visible;
-}
-
 .column {
   height: 300px;
   float: left;
@@ -131,16 +124,6 @@ img.greyscale {
 img.greyscale:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
-}
-
-#main {
-  position: absolute;
-  display: inline;
-  width: 1030px;
-  top:194px;
-  left:100px;
-  float: left;
-  margin-bottom: 100px;
 }
 
 #preview {

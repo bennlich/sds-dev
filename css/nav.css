@@ -1,10 +1,20 @@
 /* Nav bar styles */
 
+#nav a:link, #nav a:visited {
+  color: #000000;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+}
+
 #superduperstudio {
   display: inline-block;  
   height: 144px;
   width: 150px;
   overflow: visible;
+  margin-left: -40px;
 }
 
 .navText {
