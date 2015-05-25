@@ -1,13 +1,5 @@
 /* Cart stuff */
 
-/* TODO: determine min-width based on wrapper content */
-.cart-button-wrapper {
-  position: absolute;
-  min-width: 121px;
-  right: 4px;
-  top: 0px;
-}
-
 .cart-input {
   padding: 1rem 1.5rem 1rem 1.5rem;
   text-align: center;
@@ -22,7 +14,7 @@
 }
 
 .cart-purchase-button {
-  border: 1px solid;
+  /*border: 1px solid;*/
   opacity: 0.25;
   transition: 0.2s linear opacity;
 }

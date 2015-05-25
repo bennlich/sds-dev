@@ -161,9 +161,28 @@ img.greyscale:hover {
   width: 100%;
 }
 
+.images-and-video {
+  position: relative;
+  width: 100%; 
+}
+
 .windowRightWORK {
   margin-top: 40px;
   width: 70%;
+}
+
+.description {
+  display: flex;
+  margin-top: 40px;
+  width: 100%;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 9pt;
+  line-height: 12pt;
+  letter-spacing: .3px;
+  position: relative;
+  height: 481px;
+  overflow: auto;
 }
 
 .textBody {
@@ -175,7 +194,18 @@ img.greyscale:hover {
   position: relative;
   padding-left: 15px;
   height: 481px;
-  overflow:auto;
+  overflow: auto;
+}
+
+.description-left {
+  position: relative;
+  width: 20%;
+}
+
+.description-right {
+  position: relative;
+  margin-left: 40px;
+  width: 60%;
 }
 
 bold {
