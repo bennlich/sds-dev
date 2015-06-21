@@ -6,15 +6,33 @@
 
 #nav {
   display: flex;
+  margin: 0px auto;
   align-items: center;
+}
+
+.nav-wrapper {
+  margin: 0px auto;
+}
+
+@media (min-width: 720px) {
+  #nav {
+    
+  }
+
+  .nav-wrapper {
+    display: flex;
+    margin-left: 134px;
+    width: 100%;
+  }
+
+  #superduperstudio {
+    margin-left: -40px;
+  }
 }
 
 #superduperstudio {
   display: inline-block;  
   height: 144px;
-  width: 150px;
-  overflow: visible;
-  margin-left: -40px;
 }
 
 .navText {
@@ -74,10 +92,4 @@
 
 .flex-filler {
   flex-grow: 1;
-}
-
-.nav-wrapper {
-  display: flex;
-  width: 100%;
-  margin-left: 134px;
 }

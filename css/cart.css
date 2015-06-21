@@ -1,5 +1,22 @@
 /* Cart stuff */
 
+.cart-buttons {
+  margin-top: 20px;
+}
+
+.cart-menu {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 719px) {
+  .cart-buttons {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin-top: 0px;
+  }
+}
+
 .cart-input {
   padding: 1rem 1.5rem 1rem 1.5rem;
   text-align: center;
@@ -14,7 +31,7 @@
 }
 
 .cart-purchase-button {
-  /*border: 1px solid;*/
+  border: 1px solid;
   opacity: 0.25;
   transition: 0.2s linear opacity;
 }
@@ -33,6 +50,7 @@
   top: 15px;
   right: 15px;
   transition: 0.2s linear opacity;
+  z-index: 100;
 }
 
 #shopping-cart.ready {
