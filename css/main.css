@@ -187,18 +187,18 @@ img.greyscale:hover {
 }
 
 /* 1078px + 2 * 60px padding */
-@media (min-width: 720px) {
+@media (min-width: 850px) {
   .description {
     display: flex;
   }
 
   .description-left {
-    width: 20%;
+    width: 206px;
   }
 
   .description-right {
     margin-left: 40px;
-    width: 60%;
+    width: 618px;
   }
 }
 
