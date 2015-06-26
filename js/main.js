@@ -94,6 +94,7 @@ function prev() {
 function next() {
   $('.jcarousel').jcarousel('scroll', '+=1');
 }
+
 var random = null;
 
 function nav() {
@@ -105,6 +106,7 @@ function nav() {
     showDrawing()
   });
 }
+
 var mainDrawings = ["Pics/logo1.svg", "Pics/logo2.svg", "Pics/logo3.svg"];
 var backgroundIMGs = ["Pics/Splash/Saturn_v2.jpg"];
 var mainDrawing = null;
@@ -193,7 +195,8 @@ function preloader() {
   // });
   nav();
   console.log("loaded");
-};
+}
+
 function showDrawing() {
   $("#draw").attr('src', mainDrawing);
   $(".drawing").css({ opacity: 1 });
@@ -201,6 +204,7 @@ function showDrawing() {
   $("#backgroundIMG").attr('src', bI);
   console.log("backgrounded");
 }
+
 function preloadProj() {
   // if (colorSwitch == false){
     random = 1+Math.floor(Math.random()*3);
@@ -228,9 +232,8 @@ function preloadProj() {
     glyphs[7]="Pics/d3g2.svg";
     glyphs[8]="Pics/d3g3.svg";
     // start preloading glyphs
-    for(var i=0; i<glyphs.length; i++) 
-    {
-       imageDrawObj1.src=glyphs[i];
+    for(var i=0; i<glyphs.length; i++) {
+      imageDrawObj1.src=glyphs[i];
     }
     glyphRandomizer();
     loadHTMLs();
@@ -244,38 +247,38 @@ function preloadProj() {
 // var glyphDrawings = ["Pics/g1.svg", "Pics/g2.svg", "Pics/g3.svg"];
 var gD = null;
 function glyphRandomizer() {
-  if (random == 1){
+  if (random == 1) {
     gD = glyphs[Math.floor(Math.random()*3)];
   }
-  if (random == 2){
+  if (random == 2) {
     gD = glyphs[3+Math.floor(Math.random()*3)];
   }
-  if (random == 3){
+  if (random == 3) {
     gD = glyphs[6+Math.floor(Math.random()*3)];
   }
   $(".glyphIMG").attr('src', gD);
 }
+
 var gDSM = null;
 function glyphRandomizerSM() {
-  if (random == 1){
+  if (random == 1) {
     gDSM = glyphsSM[Math.floor(Math.random()*3)];
   }
-  if (random == 2){
+  if (random == 2) {
     gDSM = glyphsSM[3+Math.floor(Math.random()*3)];
   }
-  if (random == 3){
+  if (random == 3) {
     gDSM = glyphsSM[6+Math.floor(Math.random()*3)];
   }
   $(".glyphIMGSM").attr('src', gDSM);
-
 }
 
 function show(p){
-  
   var menuNum = "#"+"nav"+p;
   $(menuNum).css({ opacity: 1 });
   console.log(gD, menuNum);
-};
+}
+
 var previewIMGs = [
   "Pics/Satellites/preview.jpg", 
   "Pics/PFSC/preview.jpg",
@@ -286,11 +289,13 @@ var previewIMGs = [
   "Pics/MFAExhibition/preview.jpg",
   "Pics/ProcessDrawings/preview.jpg"
 ];
+
 var p = null;
 function previewStart() {
   // randPrev = glyphs[Math.floor(Math.random()*preview2DIMGs.length)];
   $(".preview").attr('src', mainDrawing);
 }
+
 function preview(p) {
   $(".preview").attr('src', previewIMGs[p-1]);
   $(".preview").css({ opacity: 1 });
@@ -301,7 +306,7 @@ function preview(p) {
   $(".drawing").css({ opacity: 0 });
   console.log(gD);
   console.log(p);
-};
+}
 
 var previewArchiveIMGs = ["Pics/blogPreview.svg", "Pics/Flags/preview.jpg", "Pics/Frog/preview.jpg", "Pics/Pluto/preview.jpg", "Pics/Saturn/preview.jpg", "Pics/Bridge/preview.jpg"];
 var p = null;
@@ -313,7 +318,7 @@ function previewArchive(p) {
   $(".drawing").css({ opacity: 0 });
   console.log(gD);
   console.log(p);
-};
+}
 
 function hide(p) {
   glyphRandomizer();
