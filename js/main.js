@@ -38,46 +38,53 @@ function loadHTMLs() {
     $.get('pages/current.html'),
     $.get('pages/archive.html'),
     $.get('pages/about.html'),
-    $.get('projects/bridge.html'),
-    $.get('projects/frog.html'),
-    $.get('projects/instructions.html'),
-    $.get('projects/MFAExhibition.html'),
-    $.get('projects/orbitconditions.html'),
-    $.get('projects/pfsc.html'),
-    $.get('projects/pips.html'),
-    $.get('projects/pluto.html'),
-    $.get('projects/satellites.html'),
-    $.get('projects/saturn.html'),
-    $.get('projects/wassiliscope.html'),
     $.get('pages/cv.html'),
+    $.get('projects/bridge.yaml'),
+    $.get('projects/frog.yaml'),
+    $.get('projects/instructions.yaml'),
+    $.get('projects/MFAExhibition.yaml'),
+    $.get('projects/orbitconditions.yaml'),
+    $.get('projects/pfsc.yaml'),
+    $.get('projects/pips.yaml'),
+    $.get('projects/pluto.yaml'),
+    $.get('projects/satellites.yaml'),
     $.get('projects/saturn.yaml'),
+    $.get('projects/wassiliscope.yaml'),
     $.get('templates/project.tmpl.html'))
-    .done(function(backdrop, current, archive, about, bridge,
+    .done(function(backdrop, current, archive, about, cv, bridge,
                    frog, instructions, MFAExhibition, orbitconditions,
                    pfsc, pips, pluto, satellites, saturn, wassiliscope,
-                   cv, saturnYaml, projectTemplate) {
+                   projectTemplate) {
       HTMLs.backdrop = backdrop[0];
       HTMLs.current = current[0];
       HTMLs.archive = archive[0];
       HTMLs.about = about[0];
-      HTMLs.bridge = bridge[0];
-      HTMLs.frog = frog[0];
-      HTMLs.instructions = instructions[0];
-      HTMLs.MFAExhibition = MFAExhibition[0];
-      HTMLs.orbitconditions = orbitconditions[0];
-      HTMLs.pfsc = pfsc[0];
-      HTMLs.pips = pips[0];
-      HTMLs.pluto = pluto[0];
-      HTMLs.satellites = satellites[0];
-      HTMLs.wassiliscope = wassiliscope[0];
       HTMLs.cv = cv[0];
 
-      var saturnContent = jsyaml.load(saturnYaml[0]);
-      var projectTemplate = $.templates(projectTemplate[0]);
-      HTMLs.saturn = projectTemplate.render(saturnContent);
+      var projectTemplate = $.templates(projectTemplate[0]),
+          render = createRenderFunction(projectTemplate);
+
+      HTMLs.bridge = render(bridge[0]);
+      HTMLs.frog = render(frog[0]);
+      HTMLs.instructions = render(instructions[0]);
+      HTMLs.MFAExhibition = render(MFAExhibition[0]);
+      HTMLs.orbitconditions = render(orbitconditions[0]);
+      HTMLs.pfsc = render(pfsc[0]);
+      HTMLs.pips = render(pips[0]);
+      HTMLs.pluto = render(pluto[0]);
+      HTMLs.satellites = render(satellites[0]);
+      HTMLs.saturn = render(saturn[0]);
+      HTMLs.wassiliscope = render(wassiliscope[0]);
 
       router();
     });
+}
+
+function createRenderFunction(tmpl) {
+  return function(yaml) {
+    var content = jsyaml.load(yaml);
+    return tmpl.render(content);
+  }
 }
 
 function prev() {

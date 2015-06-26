@@ -1,0 +1,47 @@
+carouselContent: >-
+  <ul>
+    <li><img src="Pics/OrbitConditions/GloryShot_web.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/GloryShot(detail)_web.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/Examples_Web.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/Instructions.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/Source.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/Cover.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread1.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread2.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread3.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread4.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread5.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread6.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread7.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread8.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread9.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread10.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread11.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread12.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread13.jpg" height="100%"></li>
+    <li><img src="Pics/OrbitConditions/BookSpread14.jpg" height="100%"></li>
+  </ul>
+
+descriptionLeftContent: >-
+  <div>
+    <bold>Orbit Conditions</bold><br/><br/>
+    2014<br>
+    Found 3D Models, Computer-generated Prints<br>
+    Languages: Rhinoscript<br>
+  </div>
+
+
+descriptionRightContent: >-
+  <i>Orbit Conditions</i> was developed as part of Chris’s design MFA thesis.  
+  The project experimented with applying procedural design strategies to 
+  predetermined topics. In this case, the moon.  The goal was to write a process 
+  to generate a form language which related to the content but could produce an 
+  infinite number of unique expressions.<br/><br/>
+
+  The set of lunar spacecraft (also used for Moon in Google Earth) was 
+  taken from Google’s <i>SketchUp 3D Warehouse.</i>  Chris imported the 
+  models into Rhino and wrote a RhinoScript to pick objects, generate the 
+  required random values, spin, project, and edit the resulting vectors.  
+  Because of the chance operations involved, and the ability to choose any 
+  3D model, following these instructions should provide an infinite number 
+  of possible outcomes.<br/>
