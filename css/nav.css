@@ -5,8 +5,12 @@
 }
 
 #nav {
+  display: -ms-flex;
+  display: -webkit-flex;
   display: flex;
   margin: 0px auto;
+  -ms-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 
@@ -20,6 +24,8 @@
   }
 
   .nav-wrapper {
+    display: -ms-flex;
+    display: -webkit-flex;
     display: flex;
     margin-left: 134px;
     width: 100%;
@@ -47,13 +53,16 @@
   margin-top: -55px;
   width: 111px;
   height: 111px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+  display: -ms-flex;
   display: -webkit-flex;
   display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-pack: center;
   -webkit-flex-pack: center;
   z-index: -10;
   overflow: visible;
@@ -63,13 +72,16 @@
   position: absolute;
   left: 0px;
   height: 26px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+  display: -ms-flex;
   display: -webkit-flex;
   display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-pack: center;
   -webkit-flex-pack: center;
   z-index: -10;
   overflow: visible;
@@ -79,17 +91,22 @@
   width: 111px;
   height: 111px;
   stroke: #000;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+  display: -ms-flex;
   display: -webkit-flex;
   display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-flex-pack: center;
   -webkit-flex-pack: center;
   overflow: visible;
 }
 
 .flex-filler {
+  -ms-flex-grow: 1;
+  -webkit-flex-grow: 1;
   flex-grow: 1;
 }

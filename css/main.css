@@ -189,6 +189,8 @@ img.greyscale:hover {
 /* 1078px + 2 * 60px padding */
 @media (min-width: 850px) {
   .description {
+    display: -ms-flex;
+    display: -webkit-flex;
     display: flex;
   }
 
@@ -243,12 +245,14 @@ bold {
   float: left;
   width: 500px;
   height: 500px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
+  display: -ms-flex;
   display: -webkit-flex;
   display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
   align-items: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-flex-pack: center;
   opacity: 0;

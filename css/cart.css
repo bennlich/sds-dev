@@ -46,6 +46,8 @@
 
 #shopping-cart {
   position: fixed;
+  display: -ms-flex;
+  display: -webkit-flex;
   display: flex;
   top: 15px;
   right: 15px;
