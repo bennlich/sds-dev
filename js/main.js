@@ -95,8 +95,6 @@ function next() {
   $('.jcarousel').jcarousel('scroll', '+=1');
 }
 
-var random = null;
-
 function nav() {
   $.get('partials/nav.html', function(data) {
     navHTML = data;
@@ -110,11 +108,13 @@ function nav() {
 var mainDrawings = ["Pics/logo1.svg", "Pics/logo2.svg", "Pics/logo3.svg"];
 var backgroundIMGs = ["Pics/Splash/Saturn_v2.jpg"];
 var mainDrawing = null;
-var bI = null;
+var bgImage = null;
+var random = null;
+
 function selectDrawing() {
   random = 1+Math.floor(Math.random()*3);
   mainDrawing = mainDrawings[random-1];
-  bI = backgroundIMGs[Math.floor(Math.random()*backgroundIMGs.length)];
+  bgImage = backgroundIMGs[Math.floor(Math.random()*backgroundIMGs.length)];
   $("#draw").attr('src', mainDrawing);
   // colorSwitch = true;
   console.log(random, mainDrawings[random], "re-rolled");
@@ -126,11 +126,9 @@ function preloader() {
   // }
 
   //preload glyphs--------------------------------->
-  // counter
-  // create object
   imageDrawObj1 = new Image();
   // set image list
-  glyphs = new Array();
+  glyphs = [];
   glyphs[0]="Pics/d1g1.svg";
   glyphs[1]="Pics/d1g2.svg";
   glyphs[2]="Pics/d1g3.svg";
@@ -140,32 +138,33 @@ function preloader() {
   glyphs[6]="Pics/d3g1.svg";
   glyphs[7]="Pics/d3g2.svg";
   glyphs[8]="Pics/d3g3.svg";
+
   // start preloading glyphs
-  for (var i=0; i<glyphs.length; i++) {
-    imageDrawObj1.src=glyphs[i];
+  for (var i = 0; i < glyphs.length; i++) {
+    imageDrawObj1.src = glyphs[i];
   }
-    //preload small glyphs--------------------------------->
-// counter
-  // create object
-  imageDrawObj2 = new Image();
-  // set image list
-  glyphsSM = new Array();
-  glyphsSM[0]="Pics/d1sg1.svg";
-  glyphsSM[1]="Pics/d1sg2.svg";
-  glyphsSM[2]="Pics/d1sg3.svg";
-  glyphsSM[3]="Pics/d2sg1.svg";
-  glyphsSM[4]="Pics/d2sg2.svg";
-  glyphsSM[5]="Pics/d2sg3.svg";
-  glyphsSM[6]="Pics/d3sg1.svg";
-  glyphsSM[7]="Pics/d3sg2.svg";
-  glyphsSM[8]="Pics/d3sg3.svg";
-  // start preloading glyphs
-  for(var i=0; i<glyphsSM.length; i++) {
-    imageDrawObj2.src=glyphsSM[i];
-  }
+  
+  // //preload small glyphs--------------------------------->
+  // imageDrawObj2 = new Image();
+  // // set image list
+  // glyphsSM = [];
+  // glyphsSM[0]="Pics/d1sg1.svg";
+  // glyphsSM[1]="Pics/d1sg2.svg";
+  // glyphsSM[2]="Pics/d1sg3.svg";
+  // glyphsSM[3]="Pics/d2sg1.svg";
+  // glyphsSM[4]="Pics/d2sg2.svg";
+  // glyphsSM[5]="Pics/d2sg3.svg";
+  // glyphsSM[6]="Pics/d3sg1.svg";
+  // glyphsSM[7]="Pics/d3sg2.svg";
+  // glyphsSM[8]="Pics/d3sg3.svg";
+  // // start preloading glyphs
+  // for (var i = 0; i < glyphsSM.length; i++) {
+  //   imageDrawObj2.src = glyphsSM[i];
+  // }
+
   imageDrawObj3 = new Image();
   // set image list
-  previews = new Array();
+  previews = [];
   previews[0]="Pics/PIPS/preview.jpg";
   previews[1]="Pics/Instructions/preview_web.jpg";
   previews[2]="Pics/OrbitConditions/preview_web.jpg";
@@ -184,65 +183,63 @@ function preloader() {
   previews[15]="Pics/PFSC/preview.jpg";
   previews[15]="Pics/blogPreview.svg";
 
-
   // start preloading glyphs
-  for(var i=0; i<previews.length; i++) {
-    imageDrawObj3.src=previews[i];
+  for (var i = 0; i < previews.length; i++) {
+    imageDrawObj3.src = previews[i];
   }
   loadHTMLs();
-  // $.get('2d_v2.html', function(data) {
-  //  bodyHTML = data;
-  // });
   nav();
   console.log("loaded");
 }
 
 function showDrawing() {
-  $("#draw").attr('src', mainDrawing);
+  $("#draw").attr("src", mainDrawing);
   $(".drawing").css({ opacity: 1 });
-  console.log("mainDrawn");
-  $("#backgroundIMG").attr('src', bI);
-  console.log("backgrounded");
+  setBackgroundImage(bgImage);
 }
 
-function preloadProj() {
-  // if (colorSwitch == false){
-    random = 1+Math.floor(Math.random()*3);
-    var mainDrawing = mainDrawings[random-1];
-    var bI = backgroundIMGs[Math.floor(Math.random()*3)];
-    $("#draw").attr('src', mainDrawing);
-    $("body").attr('background', bI);
-    colorSwitch = true;
-    console.log(random, mainDrawings[random], "re-rolled");
-  // }
+function setBackgroundImage(url) {
+  $("#background").css("background", "url('../"+url+"') no-repeat center center fixed");
+}
 
-  //preload glyphs--------------------------------->
-  // counter
-    // create object
-    imageDrawObj1 = new Image();
-    // set image list
-    glyphs = new Array();
-    glyphs[0]="Pics/d1g1.svg";
-    glyphs[1]="Pics/d1g2.svg";
-    glyphs[2]="Pics/d1g3.svg";
-    glyphs[3]="Pics/d2g1.svg";
-    glyphs[4]="Pics/d2g2.svg";
-    glyphs[5]="Pics/d2g3.svg";
-    glyphs[6]="Pics/d3g1.svg";
-    glyphs[7]="Pics/d3g2.svg";
-    glyphs[8]="Pics/d3g3.svg";
-    // start preloading glyphs
-    for(var i=0; i<glyphs.length; i++) {
-      imageDrawObj1.src=glyphs[i];
-    }
-    glyphRandomizer();
-    loadHTMLs();
-    // $.get('2d_v2.html', function(data) {
-    //  bodyHTML = data;
-    // });
-    nav();
-    console.log("loaded");
-};
+// function preloadProj() {
+//   // if (colorSwitch == false){
+//     random = 1+Math.floor(Math.random()*3);
+//     var mainDrawing = mainDrawings[random-1];
+//     var bgImage = backgroundIMGs[Math.floor(Math.random()*3)];
+//     $("#draw").attr('src', mainDrawing);
+//     $("body").attr('background', bgImage);
+//     colorSwitch = true;
+//     console.log(random, mainDrawings[random], "re-rolled");
+//   // }
+
+//   //preload glyphs--------------------------------->
+//   // counter
+//     // create object
+//     imageDrawObj1 = new Image();
+//     // set image list
+//     glyphs = new Array();
+//     glyphs[0]="Pics/d1g1.svg";
+//     glyphs[1]="Pics/d1g2.svg";
+//     glyphs[2]="Pics/d1g3.svg";
+//     glyphs[3]="Pics/d2g1.svg";
+//     glyphs[4]="Pics/d2g2.svg";
+//     glyphs[5]="Pics/d2g3.svg";
+//     glyphs[6]="Pics/d3g1.svg";
+//     glyphs[7]="Pics/d3g2.svg";
+//     glyphs[8]="Pics/d3g3.svg";
+//     // start preloading glyphs
+//     for(var i=0; i<glyphs.length; i++) {
+//       imageDrawObj1.src=glyphs[i];
+//     }
+//     glyphRandomizer();
+//     loadHTMLs();
+//     // $.get('2d_v2.html', function(data) {
+//     //  bodyHTML = data;
+//     // });
+//     nav();
+//     console.log("loaded");
+// };
 
 // var glyphDrawings = ["Pics/g1.svg", "Pics/g2.svg", "Pics/g3.svg"];
 var gD = null;
