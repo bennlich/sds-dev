@@ -128,16 +128,17 @@ function preloader() {
   //preload glyphs--------------------------------->
   imageDrawObj1 = new Image();
   // set image list
-  glyphs = [];
-  glyphs[0]="Pics/d1g1.svg";
-  glyphs[1]="Pics/d1g2.svg";
-  glyphs[2]="Pics/d1g3.svg";
-  glyphs[3]="Pics/d2g1.svg";
-  glyphs[4]="Pics/d2g2.svg";
-  glyphs[5]="Pics/d2g3.svg";
-  glyphs[6]="Pics/d3g1.svg";
-  glyphs[7]="Pics/d3g2.svg";
-  glyphs[8]="Pics/d3g3.svg";
+  glyphs = [
+    "Pics/d1g1.svg",
+    "Pics/d1g2.svg",
+    "Pics/d1g3.svg",
+    "Pics/d2g1.svg",
+    "Pics/d2g2.svg",
+    "Pics/d2g3.svg",
+    "Pics/d3g1.svg",
+    "Pics/d3g2.svg",
+    "Pics/d3g3.svg"
+  ];
 
   // start preloading glyphs
   for (var i = 0; i < glyphs.length; i++) {
@@ -164,24 +165,26 @@ function preloader() {
 
   imageDrawObj3 = new Image();
   // set image list
-  previews = [];
-  previews[0]="Pics/PIPS/preview.jpg";
-  previews[1]="Pics/Instructions/preview_web.jpg";
-  previews[2]="Pics/OrbitConditions/preview_web.jpg";
-  previews[3]="Pics/ProcessDrawings/preview.jpg";
-  previews[4]="Pics/Satellites/preview.jpg";
-  previews[5]="Pics/PIPS/preview.jpg";
-  previews[6]="Pics/Instructions/preview_web.jpg";
-  previews[7]="Pics/Wassiliscope/preview2.jpg";
-  previews[8]="Pics/MFAExhibition/preview.jpg";
-  previews[9]="Pics/Title.svg";
-  previews[10]="Pics/Flags/preview.jpg";
-  previews[11]="Pics/Frog/preview.jpg";
-  previews[12]="Pics/Pluto/preview.jpg";
-  previews[13]="Pics/Saturn/preview_v4.jpg";
-  previews[14]="Pics/Bridge/preview.jpg";
-  previews[15]="Pics/PFSC/preview.jpg";
-  previews[15]="Pics/blogPreview.svg";
+  previews = [
+    "Pics/PIPS/preview.jpg",
+    "Pics/Instructions/preview_web.jpg",
+    "Pics/OrbitConditions/preview_web.jpg",
+    "Pics/Satellites/preview.jpg",
+    "Pics/PIPS/preview.jpg",
+    "Pics/Instructions/preview_web.jpg",
+    "Pics/Wassiliscope/preview2.jpg",
+    "Pics/MFAExhibition/preview.jpg",
+    "Pics/Title.svg",
+    "Pics/Frog/preview.jpg",
+    "Pics/Pluto/preview.jpg",
+    "Pics/Saturn/preview_v4.jpg",
+    "Pics/Bridge/preview.jpg",
+    "Pics/PFSC/preview.jpg",
+    "Pics/blogPreview.svg"
+  ];
+  // missing images
+  // previews[3]="Pics/ProcessDrawings/preview.jpg";
+  // previews[10]="Pics/Flags/preview.jpg";
 
   // start preloading glyphs
   for (var i = 0; i < previews.length; i++) {

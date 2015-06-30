@@ -63,11 +63,10 @@
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-flex-pack: center;
-  -webkit-flex-pack: center;
   overflow: visible;
 }
 
-.glyphBoxSM {
+/*.glyphBoxSM {
   position: absolute;
   left: 0px;
   height: 26px;
@@ -81,10 +80,9 @@
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-flex-pack: center;
-  -webkit-flex-pack: center;
   z-index: -10;
   overflow: visible;
-}
+}*/
 
 .glyph {
   width: 111px;
@@ -99,7 +97,6 @@
   -ms-justify-content: center;
   -webkit-justify-content: center;
   justify-content: center;
-  -webkit-flex-pack: center;
   -webkit-flex-pack: center;
   overflow: visible;
 }
