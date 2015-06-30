@@ -23,14 +23,12 @@ have a fixed width and height (but it's not required).
     position: relative;
     overflow: hidden;
     width: 100%;
-/*    height: 400px*/;
 }
 
 .jcarouselPreview {
     position: relative;
     overflow: hidden;
     width: 100%;
-/*    height: 400px*/;
 }
 
 .jcarousel li img {

@@ -32,6 +32,14 @@ function initCarousel() {
   $('.carouselArrows').delay(2000).fadeOut(200);
 }
 
+function prev() {
+  $('.jcarousel').jcarousel('scroll', '-=1');
+}
+
+function next() {
+  $('.jcarousel').jcarousel('scroll', '+=1');
+}
+
 function loadHTMLs() {
   $.when(
     $.get('partials/backdrop.html'),
@@ -85,14 +93,6 @@ function createRenderFunction(tmpl) {
     var content = jsyaml.load(yaml);
     return tmpl.render(content);
   }
-}
-
-function prev() {
-  $('.jcarousel').jcarousel('scroll', '-=1');
-}
-
-function next() {
-  $('.jcarousel').jcarousel('scroll', '+=1');
 }
 
 function nav() {
