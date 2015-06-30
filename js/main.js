@@ -102,8 +102,8 @@ function nav() {
     navHTML = data;
     $('#nav').html(navHTML);
     glyphRandomizer();
-    glyphRandomizerSM();
-    showDrawing()
+    // glyphRandomizerSM();
+    showDrawing();
   });
 }
 
@@ -259,72 +259,68 @@ function glyphRandomizer() {
   $(".glyphIMG").attr('src', gD);
 }
 
-var gDSM = null;
-function glyphRandomizerSM() {
-  if (random == 1) {
-    gDSM = glyphsSM[Math.floor(Math.random()*3)];
-  }
-  if (random == 2) {
-    gDSM = glyphsSM[3+Math.floor(Math.random()*3)];
-  }
-  if (random == 3) {
-    gDSM = glyphsSM[6+Math.floor(Math.random()*3)];
-  }
-  $(".glyphIMGSM").attr('src', gDSM);
+// var gDSM = null;
+// function glyphRandomizerSM() {
+//   if (random == 1) {
+//     gDSM = glyphsSM[Math.floor(Math.random()*3)];
+//   }
+//   if (random == 2) {
+//     gDSM = glyphsSM[3+Math.floor(Math.random()*3)];
+//   }
+//   if (random == 3) {
+//     gDSM = glyphsSM[6+Math.floor(Math.random()*3)];
+//   }
+//   $(".glyphIMGSM").attr('src', gDSM);
+// }
+
+function show(idx){
+  $("#nav"+idx).css({ opacity: 1 });
 }
 
-function show(p){
-  var menuNum = "#"+"nav"+p;
-  $(menuNum).css({ opacity: 1 });
-  console.log(gD, menuNum);
-}
-
-var previewIMGs = [
-  "Pics/Satellites/preview.jpg", 
-  "Pics/PFSC/preview.jpg",
-  "Pics/PIPS/preview.jpg", 
-  "Pics/Instructions/preview_web.jpg", 
-  "Pics/OrbitConditions/preview_web.jpg", 
-  "Pics/Wassiliscope/preview2.jpg",
-  "Pics/MFAExhibition/preview.jpg",
-  "Pics/ProcessDrawings/preview.jpg"
-];
-
-var p = null;
-function previewStart() {
-  // randPrev = glyphs[Math.floor(Math.random()*preview2DIMGs.length)];
-  $(".preview").attr('src', mainDrawing);
-}
-
-function preview(p) {
-  $(".preview").attr('src', previewIMGs[p-1]);
-  $(".preview").css({ opacity: 1 });
-  // var gD = glyphsSM[Math.floor(Math.random()*3)];
-  // $(".glyphBoxSM").css({ opacity: 1 });
-  // $(".glyphImgSM").css({ opacity: 1 });
-  $("#"+p).css({ opacity: 1 });
-  $(".drawing").css({ opacity: 0 });
-  console.log(gD);
-  console.log(p);
-}
-
-var previewArchiveIMGs = ["Pics/blogPreview.svg", "Pics/Flags/preview.jpg", "Pics/Frog/preview.jpg", "Pics/Pluto/preview.jpg", "Pics/Saturn/preview.jpg", "Pics/Bridge/preview.jpg"];
-var p = null;
-
-function previewArchive(p) {
-  $(".preview").attr('src', previewArchiveIMGs[p-1]);
-  $(".preview").css({ opacity: 1 });
-  $("#"+p).css({ opacity: 1 });
-  $(".drawing").css({ opacity: 0 });
-  console.log(gD);
-  console.log(p);
-}
-
-function hide(p) {
+function hide(idx) {
   glyphRandomizer();
-  glyphRandomizerSM();
+  // glyphRandomizerSM();
   $(".drawing").css({ opacity: 1 });
   $(".preview").css({ opacity: 0 });
-  $("#nav"+p).css({ opacity: 0 });
-  $("#"+p).css({ opacity: 0 });
+  $("#nav"+idx).css({ opacity: 0 });
+  $("#"+idx).css({ opacity: 0 });
 }
+
+// var previewIMGs = [
+//   "Pics/Satellites/preview.jpg", 
+//   "Pics/PFSC/preview.jpg",
+//   "Pics/PIPS/preview.jpg", 
+//   "Pics/Instructions/preview_web.jpg", 
+//   "Pics/OrbitConditions/preview_web.jpg", 
+//   "Pics/Wassiliscope/preview2.jpg",
+//   "Pics/MFAExhibition/preview.jpg",
+//   "Pics/ProcessDrawings/preview.jpg"
+// ];
+
+// function previewStart() {
+//   // randPrev = glyphs[Math.floor(Math.random()*preview2DIMGs.length)];
+//   $(".preview").attr('src', mainDrawing);
+// }
+
+// function preview(p) {
+//   $(".preview").attr('src', previewIMGs[p-1]);
+//   $(".preview").css({ opacity: 1 });
+//   // var gD = glyphsSM[Math.floor(Math.random()*3)];
+//   // $(".glyphBoxSM").css({ opacity: 1 });
+//   // $(".glyphImgSM").css({ opacity: 1 });
+//   $("#"+p).css({ opacity: 1 });
+//   $(".drawing").css({ opacity: 0 });
+//   console.log(gD);
+//   console.log(p);
+// }
+
+// var previewArchiveIMGs = ["Pics/blogPreview.svg", "Pics/Flags/preview.jpg", "Pics/Frog/preview.jpg", "Pics/Pluto/preview.jpg", "Pics/Saturn/preview.jpg", "Pics/Bridge/preview.jpg"];
+
+// function previewArchive(p) {
+//   $(".preview").attr('src', previewArchiveIMGs[p-1]);
+//   $(".preview").css({ opacity: 1 });
+//   $("#"+p).css({ opacity: 1 });
+//   $(".drawing").css({ opacity: 0 });
+//   console.log(gD);
+//   console.log(p);
+// }
