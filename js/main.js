@@ -23,13 +23,16 @@ function initCarousel() {
       target: '+=1',
       autostart: false
     })
-    
-  $('.images-and-video').hover(
-    function() { $(".carouselArrows").fadeIn(200); },
-    function() { $(".carouselArrows").fadeOut(200); }
-  );
 
-  $('.carouselArrows').delay(2000).fadeOut(200);
+  var windowSize = $(window).width();
+  if (windowSize > 1000) {
+    $('.images-and-video').hover(
+      function() { $(".carouselArrows").fadeIn(200); },
+      function() { $(".carouselArrows").fadeOut(200); }
+    );
+
+    $('.carouselArrows').delay(2000).fadeOut(200);
+  }
 }
 
 function prev() {
