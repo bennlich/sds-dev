@@ -43,6 +43,7 @@
 
 .navText {
   position: relative;
+  display: inline-block;
 }
 
 .glyphBox {
@@ -56,6 +57,7 @@
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
+  pointer-events: none;
   -ms-align-items: center;
   -webkit-align-items: center;
   align-items: center;
