@@ -205,7 +205,7 @@ function showDrawing() {
 }
 
 function setBackgroundImage(url) {
-  $("#background-link").css("background", "url('../"+url+"') no-repeat center center fixed");
+  $("#background-link").css("background-image", "url('"+url+"')");
 }
 
 // function preloadProj() {
