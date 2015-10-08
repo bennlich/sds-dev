@@ -15,7 +15,7 @@
 }
 
 .nav-wrapper {
-  margin: 0px auto;
+  
 }
 
 @media (min-width: 720px) {
@@ -27,8 +27,8 @@
     display: -ms-flex;
     display: -webkit-flex;
     display: flex;
-    margin-left: 134px;
     width: 100%;
+    margin: 0px auto;
   }
 
   #superduperstudio {
