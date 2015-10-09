@@ -12,6 +12,7 @@ body {
   color: #000000;
   margin: auto;
   padding: 0px 60px;
+  overflow-x: hidden;
 }
 
 #background {
@@ -228,13 +229,21 @@ bold {
 }
 
 .AboutTextWindow {
-  width: 515px;
+  max-width: 515px;
   height: 481px;
 }
 
 .AboutPicture {
-  width: 1030px;
-  height: 433px;
+  margin: 0px auto;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 719px) {
+  .AboutPicture {
+    margin-left: -30px;
+    width: 120%;
+  }
 }
 
 .MenuText {
@@ -244,7 +253,7 @@ bold {
   line-height: 12pt;
   letter-spacing: .3px;
   position: relative;
-  width: 515px;
+  max-width: 515px;
   overflow:auto;
 }
 
