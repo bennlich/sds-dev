@@ -93,18 +93,26 @@ a:hover {
   text-decoration: underline;
 }
 
-.column {
-  height: 300px;
-  float: left;
-  width: 33.33%;
-  padding: 56px 15px 56px 15px;
-  overflow: hidden;
+.grid {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1030px;
+  margin: 0px auto;
 }
 
-.grid:after {
-  content: "";
-  display: table;
-  clear: both;
+.grid a {
+  padding: 20px 0px;
+}
+
+.grid a img {
+  width: 100%;
+}
+
+.grid .spacer {
+  width: 328px;
 }
 
 *, *:after, *:before {
