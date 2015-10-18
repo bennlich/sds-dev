@@ -99,7 +99,9 @@ a:hover {
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   justify-content: space-around;
+  -webkit-justify-content: space-around;
   max-width: 1030px;
   margin: 0px auto;
 }
