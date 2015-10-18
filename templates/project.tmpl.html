@@ -2,18 +2,20 @@
 
   <!-- begin carousel -->
   <div class="images-and-video">
-    <div class="jcarousel" >
+    <div class="carousel" >
       {{:carouselContent}}
     </div>
-
-    <div class="carouselArrows">
-      <div class="innerCarouselArrows">
-        <div class="carouselArrowsLeft" onclick="prev()">
-          <img src="Pics/ArrowLeft.svg" right="50px">
-        </div>
-        <div class="carouselArrowsRight" onclick="next()">
-          <img src="Pics/ArrowRight.svg" left="50px">
-        </div>
+    <div id="carousel-counter">
+      <div class="carousel-arrow left" onclick="prev()">
+        <img src="Pics/ArrowLeft.svg" right="50px">
+      </div>
+      <div class="carousel-counts">
+        <bold id="current-image"></bold>
+        <bold>/</bold>
+        <bold id="total-images"></bold>
+      </div>
+      <div class="carousel-arrow right" onclick="next()">
+        <img src="Pics/ArrowRight.svg" left="50px">
       </div>
     </div>
   </div>

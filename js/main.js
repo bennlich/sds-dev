@@ -1,46 +1,34 @@
+var carousel, globalSlick;
 
 // var colorSwitch = true;
 var HTMLs = {
 };
 
 function initCarousel() {
-  $('.jcarousel')
-    .on('jcarousel:create jcarousel:reload', function() {
-      var element = $(this),
-          width = element.innerWidth();
+  carousel = $('.carousel');
 
-      // This shows 1 item at a time.
-      // Divide `width` to the number of items you want to display,
-      // eg. `width = width / 3` to display 3 items at a time.
-      element.jcarousel('items').css('width', width + 'px');
-    })
-    .jcarousel({
-      wrap: 'circular',
-      center: true
-    })
-    .jcarouselAutoscroll({
-      interval: 4000,
-      target: '+=1',
-      autostart: false
-    })
+  carousel.on("init", function(event, slick) {
+    $("#current-image").html(1+slick.currentSlide);
+    $("#total-images").html(slick.slideCount);
+  });
 
-  var windowSize = $(window).width();
-  if (windowSize > 1000) {
-    $('.images-and-video').hover(
-      function() { $(".carouselArrows").fadeIn(200); },
-      function() { $(".carouselArrows").fadeOut(200); }
-    );
+  carousel.slick({
+    slidesToShow: 1,
+    infinite: true,
+    arrows: false
+  });
 
-    $('.carouselArrows').delay(2000).fadeOut(200);
-  }
+  carousel.on("afterChange", function(event, slick, currentSlide) {
+    $("#current-image").html(1+currentSlide);
+  });
 }
 
 function prev() {
-  $('.jcarousel').jcarousel('scroll', '-=1');
+  carousel.slick('slickPrev');
 }
 
 function next() {
-  $('.jcarousel').jcarousel('scroll', '+=1');
+  carousel.slick('slickNext');
 }
 
 function loadHTMLs() {

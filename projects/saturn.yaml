@@ -1,16 +1,14 @@
 carouselContent: >-
-  <ul>
-    <li><div class="video-wrapper">
-      <iframe src="//player.vimeo.com/video/110661829?loop=1" width="747" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </div></li>
-    <li><img src="Pics/Saturn/Red1_v2.jpg"></li>
-    <li><img src="Pics/Saturn/Red2_v2.jpg"></li>
-    <!-- <li><img src="Pics/Saturn/SaturnCollection.jpg"></li> -->
-    <li><img src="Pics/Saturn/White1_v2.jpg"></li>
-    <li><img src="Pics/Saturn/White2_v2.jpg"></li>
-    <li><img src="Pics/Saturn/Stacked_v2.jpg"></li>
-    <!-- <li><img src="Pics/Saturn/concept.jpg"></li> -->
-  </ul>
+  <div><div class="video-wrapper">
+    <iframe src="//player.vimeo.com/video/110661829?loop=1" width="747" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div></div>
+  <div><img src="Pics/Saturn/Red1_v2.jpg"></div>
+  <div><img src="Pics/Saturn/Red2_v2.jpg"></div>
+  <!-- <div><img src="Pics/Saturn/SaturnCollection.jpg"></div> -->
+  <div><img src="Pics/Saturn/White1_v2.jpg"></div>
+  <div><img src="Pics/Saturn/White2_v2.jpg"></div>
+  <div><img src="Pics/Saturn/Stacked_v2.jpg"></div>
+  <!-- <div><img src="Pics/Saturn/concept.jpg"></div> -->
 
 descriptionLeftContent: >-
   <div>

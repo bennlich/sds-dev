@@ -1,16 +1,14 @@
 carouselContent: >-
-  <ul>
-    <li><img src="Pics/MFAExhibition/triangles.jpg" height="100%"></li>
-    <li><img src="Pics/MFAExhibition/Exhibition1.jpg" height="100%"></li>
-    <li><img src="Pics/MFAExhibition/Exhibition22.jpg" height="100%"></li>
-    <li><img src="Pics/MFAExhibition/Website.jpg" height="100%"></li>
-    <li><img src="Pics/MFAExhibition/Map.jpg" height="100%"></li>
-    <li><img src="Pics/MFAExhibition/Exhibition5.jpg" height="100%"></li>
-    <li><img src="Pics/MFAExhibition/Exhibition16.jpg" height="100%"></li>
-    <li><img src="Pics/MFAExhibition/Exhibition12.jpg" height="100%"></li>
-    <li><img src="Pics/MFAExhibition/Exhibition13.jpg" height="100%"></li>
-    <li><img src="Pics/MFAExhibition/Exhibition14.jpg" height="100%"></li>
-  </ul>
+  <div><img src="Pics/MFAExhibition/triangles.jpg" height="100%"></div>
+  <div><img src="Pics/MFAExhibition/Exhibition1.jpg" height="100%"></div>
+  <div><img src="Pics/MFAExhibition/Exhibition22.jpg" height="100%"></div>
+  <div><img src="Pics/MFAExhibition/Website.jpg" height="100%"></div>
+  <div><img src="Pics/MFAExhibition/Map.jpg" height="100%"></div>
+  <div><img src="Pics/MFAExhibition/Exhibition5.jpg" height="100%"></div>
+  <div><img src="Pics/MFAExhibition/Exhibition16.jpg" height="100%"></div>
+  <div><img src="Pics/MFAExhibition/Exhibition12.jpg" height="100%"></div>
+  <div><img src="Pics/MFAExhibition/Exhibition13.jpg" height="100%"></div>
+  <div><img src="Pics/MFAExhibition/Exhibition14.jpg" height="100%"></div>
 
 descriptionLeftContent: >-
   <div>

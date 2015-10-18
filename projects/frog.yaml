@@ -1,14 +1,12 @@
 carouselContent: >-
-  <ul>
-    <li><img src="Pics/Frog/insights1.jpg" height="100%"></li>
-    <li><img src="Pics/Frog/insights2.jpg" height="100%"></li>
-    <li><img src="Pics/Frog/insights3.jpg" height="100%"></li>
-    <li><img src="Pics/Frog/insights4.jpg" height="100%"></li>
-    <li><img src="Pics/Frog/insights5.jpg" height="100%"></li>
-    <li><img src="Pics/Frog/insights6.jpg" height="100%"></li>
-    <li><img src="Pics/Frog/insights7.jpg" height="100%"></li>
-    <li><img src="Pics/Frog/insights8.jpg" height="100%"></li>
-  </ul>
+  <div><img src="Pics/Frog/insights1.jpg" height="100%"></div>
+  <div><img src="Pics/Frog/insights2.jpg" height="100%"></div>
+  <div><img src="Pics/Frog/insights3.jpg" height="100%"></div>
+  <div><img src="Pics/Frog/insights4.jpg" height="100%"></div>
+  <div><img src="Pics/Frog/insights5.jpg" height="100%"></div>
+  <div><img src="Pics/Frog/insights6.jpg" height="100%"></div>
+  <div><img src="Pics/Frog/insights7.jpg" height="100%"></div>
+  <div><img src="Pics/Frog/insights8.jpg" height="100%"></div>
 
 descriptionLeftContent: >-
   <div>

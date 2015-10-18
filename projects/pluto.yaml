@@ -1,11 +1,9 @@
 carouselContent: >-
-  <ul>
-    <li><img src="Pics/Pluto/pluto.jpg" height="100%"></li>
-    <li><img src="Pics/Pluto/letter.jpg" height="100%"></li>
-    <li><img src="Pics/Pluto/sketches.jpg" height="100%"></li>
-    <li><img src="Pics/Pluto/observatory.jpg" height="100%"></li>
-    <li><img src="Pics/Pluto/event.jpg" height="100%"></li>
-  </ul>
+  <div><img src="Pics/Pluto/pluto.jpg" height="100%"></div>
+  <div><img src="Pics/Pluto/letter.jpg" height="100%"></div>
+  <div><img src="Pics/Pluto/sketches.jpg" height="100%"></div>
+  <div><img src="Pics/Pluto/observatory.jpg" height="100%"></div>
+  <div><img src="Pics/Pluto/event.jpg" height="100%"></div>
 
 descriptionLeftContent: >-
   <div>
