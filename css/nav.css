@@ -14,8 +14,10 @@
   align-items: center;
 }
 
-.nav-wrapper {
-  
+@media (max-width: 400px) {
+  .nav-wrapper {
+    margin: 0px auto;
+  }
 }
 
 @media (min-width: 720px) {
