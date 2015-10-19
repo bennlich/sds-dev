@@ -1,5 +1,11 @@
 /* Cart stuff */
 
+.dropy {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .cart-buttons {
   margin-top: 20px;
 }
@@ -34,6 +40,9 @@
   border: 1px solid;
   opacity: 0.25;
   transition: 0.2s linear opacity;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .cart-purchase-button:hover {
