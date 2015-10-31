@@ -18,9 +18,21 @@ function initCarousel() {
     arrows: false
   });
 
+  // Update the current image counter when the carousel scrolls
   carousel.on("afterChange", function(event, slick, currentSlide) {
     $("#current-image").html(1+currentSlide);
   });
+
+  // If there are vimeo players, pause them when the carousel scrolls
+  var vimeoPlayers = document.querySelectorAll('iframe');
+  if (vimeoPlayers.length > 0) {
+    carousel.on("afterChange", function(event, slick, currentSlide) {
+      for (var i = 0; i < vimeoPlayers.length; i++) {
+        var player = vimeoPlayers[i];
+        $f(player).api("pause");
+      }
+    });
+  }
 }
 
 function prev() {
