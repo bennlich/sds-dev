@@ -1,7 +1,10 @@
 carouselContent: >-
-  <div><div class="video-wrapper">
-    <iframe src="//player.vimeo.com/video/110661829?loop=1" width="747" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </div></div>
+  <div>
+    <div class="video-wrapper">
+      <iframe src="//player.vimeo.com/video/110661829?loop=1" width="747" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <div class="swipeable-overlay"></div>
+    </div>
+  </div>
   <div><img src="Pics/Saturn/Red1_v2.jpg"></div>
   <div><img src="Pics/Saturn/Red2_v2.jpg"></div>
   <!-- <div><img src="Pics/Saturn/SaturnCollection.jpg"></div> -->
