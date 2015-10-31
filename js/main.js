@@ -104,7 +104,24 @@ function nav() {
     $('#nav').html(navHTML);
     glyphRandomizer();
     showDrawing();
+    if ($(window).width() > 1200) {
+      // only do hover events on non-touch devices
+      bindNavMouseOverEvents();
+    }
   });
+}
+
+function bindNavMouseOverEvents() {
+  var navLinks = $(".navText a");
+  for (var i = 0; i < navLinks.length; i++) {
+    var curLink = $(navLinks[i]);
+    var idx = i;
+    curLink.hover(function() {
+      show(this.idx);
+    }.bind({ idx: idx }), function() {
+      hide(this.idx);
+    }.bind({ idx: idx }));
+  }
 }
 
 var mainDrawings = ["Pics/logo1.svg", "Pics/logo2.svg", "Pics/logo3.svg"];
