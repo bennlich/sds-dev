@@ -103,7 +103,6 @@ function nav() {
     navHTML = data;
     $('#nav').html(navHTML);
     glyphRandomizer();
-    // glyphRandomizerSM();
     showDrawing();
   });
 }
@@ -200,7 +199,6 @@ function preloader() {
 
 function showDrawing() {
   $("#draw").attr("src", mainDrawing);
-  $(".drawing").css({ opacity: 1 });
   setBackgroundImage(bgImage);
 }
 
@@ -282,11 +280,7 @@ function show(idx){
 
 function hide(idx) {
   glyphRandomizer();
-  // glyphRandomizerSM();
-  $(".drawing").css({ opacity: 1 });
-  $(".preview").css({ opacity: 0 });
   $("#nav"+idx).css({ opacity: 0 });
-  $("#"+idx).css({ opacity: 0 });
 }
 
 // var previewIMGs = [
