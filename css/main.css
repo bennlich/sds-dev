@@ -2,6 +2,24 @@ html {
   -webkit-text-size-adjust: 100%; /* prevent weird text-size effects in landscape mode */
   width: 100%;
   height: 100%;
+  /* causes buttons to be sized properly in rems */
+  font-size: 7px;
+}
+
+/* Normalize */
+/* important for Dropy content */
+ul, dl {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 0;
+  -moz-margin-before: 0;
+  -moz-margin-after: 0;
+  -moz-padding-start: 0;
+}
+
+dd {
+  -webkit-margin-start: 0;
+  -moz-margin-start: 0;
 }
 
 body {

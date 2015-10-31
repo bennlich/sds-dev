@@ -1,43 +1,28 @@
-/* Normalize */
-ul, dl{
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-padding-start: 0;
-  -moz-margin-before: 0;
-  -moz-margin-after: 0;
-  -moz-padding-start: 0;
-}
-dd{
-  -webkit-margin-start: 0;
-  -moz-margin-start: 0;
-}
-
 /* Colors */
 /* Variables */
 /* Dropy style */
 .dropy {
   position: relative;
   width: 100%;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .dropy__title {
   position: relative;
   display: block;
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #000000;
   text-decoration: none;
   font-size: 1.6rem;
-  color: #464646;
+  color: #000000;
   cursor: pointer;
   transition: border-color 250ms ease-in-out; }
   .dropy__title span {
     display: block;
-    padding: 1rem 3rem 1rem 1.5rem;
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    text-align: center;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
-    text-align: center; }
+    overflow: hidden; }
   .dropy__title:hover {
     border-color: #868686; }
   .dropy__title:after {
@@ -79,7 +64,7 @@ dd{
     display: block;
     padding: 1rem 1.5rem;
     font-size: 1.6rem;
-    color: #464646;
+    color: #000000;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 250ms ease-in-out, color 250ms ease-in-out; }
@@ -93,7 +78,7 @@ dd{
     font-size: 1.6rem; }
   .dropy__content .selected {
     font-weight: 700 !important;
-    color: black; }
+    color: #000000; }
 
 .dropy.open .dropy__content ul {
   max-height: 30rem;
@@ -105,7 +90,4 @@ dd{
   .dropy.dark .dropy__title:hover {
     border-color: #cccccc; }
 
-html {
-  /* causes buttons to be sized properly in rems */
-  font-size: 7px;
-}
+/*# sourceMappingURL=dropy.css.map */

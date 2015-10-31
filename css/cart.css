@@ -15,16 +15,19 @@
 }
 
 @media (max-width: 849px) {
-  .cart-buttons {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    margin-top: 0px;
+  .cart-menu {
+    margin: 0px;
+  }
+
+  .cart-buttons div {
+    display: inline-block;
+    width: 49%;
+    vertical-align: middle;
   }
 }
 
 .cart-input {
-  padding: 1rem 1.5rem 1rem 1.5rem;
+  padding: 1.5rem;
   text-align: center;
   margin: 2px 0px;
   cursor: pointer;
