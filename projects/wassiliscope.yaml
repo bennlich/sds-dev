@@ -1,9 +1,12 @@
 carouselContent: >-
   <div><img src="Pics/Wassiliscope/Telescope1.jpg" height="100%"></div>
+  <div>
+    <div class="video-wrapper">
+      <iframe src="//player.vimeo.com/video/84816568?loop=1" width="747" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <div class="swipeable-overlay"></div>
+    </div>
+  </div>
   <div><img src="Pics/Wassiliscope/Diagram.jpg" height="100%"></div>
-  <div><div class="video-wrapper">
-    <iframe src="//player.vimeo.com/video/84816568?loop=1" width="747" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </div></div>
   <div><img src="Pics/Wassiliscope/Demo.jpg" height="100%"></div>
 
 descriptionLeftContent: >-

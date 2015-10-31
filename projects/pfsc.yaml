@@ -1,7 +1,10 @@
 carouselContent: >-
-  <div><div class="video-wrapper">
-    <iframe src="//player.vimeo.com/video/97287455?loop=1" width="747" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </div></div>
+  <div>
+    <div class="video-wrapper">
+      <iframe src="//player.vimeo.com/video/97287455?loop=1" width="747" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <div class="swipeable-overlay"></div>
+    </div>
+  </div>
   <div><img src="Pics/PFSC/1.jpg" width="100%"></div>
   <div><img src="Pics/PFSC/2.jpg" width="100%"></div>
   <div><img src="Pics/PFSC/3.jpg" width="100%"></div>
