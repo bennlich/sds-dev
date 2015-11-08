@@ -126,14 +126,27 @@ function bindNavMouseOverEvents() {
 
 var mainDrawings = ["Pics/logo1.svg", "Pics/logo2.svg", "Pics/logo3.svg"];
 var backgroundIMGs = ["Pics/Splash/Saturn_v2.jpg"];
+var backgroundIMGsMobile = ["Pics/Splash/HomepagePortrait.jpg"];
 var mainDrawing = null;
 var bgImage = null;
 var random = null;
 
+function thisIsAPhone() {
+  // TODO: There might be more reliable ways to determine if this is a phone.
+  return ($(window).width() <= 720);
+}
+
+function getRandomBackgroundImg() {
+  if (thisIsAPhone()) {
+    return backgroundIMGsMobile[Math.floor(Math.random()*backgroundIMGsMobile.length)];
+  }
+  return backgroundIMGs[Math.floor(Math.random()*backgroundIMGs.length)];
+}
+
 function selectDrawing() {
   random = 1+Math.floor(Math.random()*3);
   mainDrawing = mainDrawings[random-1];
-  bgImage = backgroundIMGs[Math.floor(Math.random()*backgroundIMGs.length)];
+  bgImage = getRandomBackgroundImg();
   $("#draw").attr('src', mainDrawing);
   // colorSwitch = true;
   console.log(random, mainDrawings[random], "re-rolled");
