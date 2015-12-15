@@ -61,10 +61,11 @@ function loadHTMLs() {
     $.get('projects/satellites.yaml'),
     $.get('projects/saturn.yaml'),
     $.get('projects/wassiliscope.yaml'),
+    $.get('projects/expandingdimensions.yaml'),
     $.get('templates/project.tmpl.html'))
     .done(function(backdrop, current, archive, about, cv, bridge,
                    frog, instructions, MFAExhibition, orbitconditions,
-                   pfsc, pips, pluto, satellites, saturn, wassiliscope,
+                   pfsc, pips, pluto, satellites, saturn, wassiliscope, expandingdimensions,
                    projectTemplate) {
       HTMLs.backdrop = backdrop[0];
       HTMLs.current = current[0];
@@ -74,7 +75,7 @@ function loadHTMLs() {
 
       var projectTemplate = $.templates(projectTemplate[0]),
           render = createRenderFunction(projectTemplate);
-
+      
       HTMLs.bridge = render(bridge[0]);
       HTMLs.frog = render(frog[0]);
       HTMLs.instructions = render(instructions[0]);
@@ -86,6 +87,7 @@ function loadHTMLs() {
       HTMLs.satellites = render(satellites[0]);
       HTMLs.saturn = render(saturn[0]);
       HTMLs.wassiliscope = render(wassiliscope[0]);
+      HTMLs.expandingdimensions = render(expandingdimensions[0]);
 
       router();
     });
