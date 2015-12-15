@@ -61,10 +61,11 @@ function loadHTMLs() {
     $.get('projects/satellites.yaml'),
     $.get('projects/saturn.yaml'),
     $.get('projects/wassiliscope.yaml'),
+    $.get('projects/ccafacultyshow.yaml'),
     $.get('templates/project.tmpl.html'))
     .done(function(backdrop, current, archive, about, cv, bridge,
                    frog, instructions, MFAExhibition, orbitconditions,
-                   pfsc, pips, pluto, satellites, saturn, wassiliscope,
+                   pfsc, pips, pluto, satellites, saturn, wassiliscope, ccafacultyshow,
                    projectTemplate) {
       HTMLs.backdrop = backdrop[0];
       HTMLs.current = current[0];
@@ -74,7 +75,7 @@ function loadHTMLs() {
 
       var projectTemplate = $.templates(projectTemplate[0]),
           render = createRenderFunction(projectTemplate);
-
+      
       HTMLs.bridge = render(bridge[0]);
       HTMLs.frog = render(frog[0]);
       HTMLs.instructions = render(instructions[0]);
@@ -86,6 +87,7 @@ function loadHTMLs() {
       HTMLs.satellites = render(satellites[0]);
       HTMLs.saturn = render(saturn[0]);
       HTMLs.wassiliscope = render(wassiliscope[0]);
+      HTMLs.ccafacultyshow = render(ccafacultyshow[0]);
 
       router();
     });
@@ -126,14 +128,27 @@ function bindNavMouseOverEvents() {
 
 var mainDrawings = ["Pics/logo1.svg", "Pics/logo2.svg", "Pics/logo3.svg"];
 var backgroundIMGs = ["Pics/Splash/Saturn_v2.jpg"];
+var backgroundIMGsMobile = ["Pics/Splash/HomepagePortrait.jpg"];
 var mainDrawing = null;
 var bgImage = null;
 var random = null;
 
+function thisIsAPhone() {
+  // TODO: There might be more reliable ways to determine if this is a phone.
+  return ($(window).width() <= 720);
+}
+
+function getRandomBackgroundImg() {
+  if (thisIsAPhone()) {
+    return backgroundIMGsMobile[Math.floor(Math.random()*backgroundIMGsMobile.length)];
+  }
+  return backgroundIMGs[Math.floor(Math.random()*backgroundIMGs.length)];
+}
+
 function selectDrawing() {
   random = 1+Math.floor(Math.random()*3);
   mainDrawing = mainDrawings[random-1];
-  bgImage = backgroundIMGs[Math.floor(Math.random()*backgroundIMGs.length)];
+  bgImage = getRandomBackgroundImg();
   $("#draw").attr('src', mainDrawing);
   // colorSwitch = true;
   console.log(random, mainDrawings[random], "re-rolled");
