@@ -31,16 +31,7 @@ descriptionLeftContent: >-
 
 
 descriptionRightContent: >-
-  <i>Orbit Conditions</i> was developed as part of Chris’s design MFA thesis.  
-  The project experimented with applying procedural design strategies to 
-  predetermined topics. In this case, the moon.  The goal was to write a process 
-  to generate a form language which related to the content but could produce an 
-  infinite number of unique expressions.<br/><br/>
-
-  The set of lunar spacecraft (also used for Moon in Google Earth) was 
-  taken from Google’s <i>SketchUp 3D Warehouse.</i>  Chris imported the 
-  models into Rhino and wrote a RhinoScript to pick objects, generate the 
-  required random values, spin, project, and edit the resulting vectors.  
-  Because of the chance operations involved, and the ability to choose any 
-  3D model, following these instructions should provide an infinite number 
-  of possible outcomes.<br/>
+  <i>Orbit Conditions</i> was developed as part of Chris’s design MFA thesis. The project investigates how procedural design strategies can be applied to any topic of interest— in this case, the moon. The goal was to design a system to generate an infinite number of unique glyphs, whose forms maintained reference to their topic.
+  <br/><br/>
+  A set of lunar spacecraft was taken from Google’s <i>SketchUp 3D Warehouse.</i> Chris imported the models into Rhino and wrote a RhinoScript to pick objects, generate the required random values, spin, project, and edit the resulting vectors. Because the process is built around chance instead of artistic intention and allows the designer choose any 3D model, following these instructions should provide an infinite number of possible outcomes.
+  <br/><br/>
