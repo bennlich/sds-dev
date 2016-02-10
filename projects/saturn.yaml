@@ -26,6 +26,9 @@ descriptionLeftContent: >-
     please visit<a href="http://www.ahalife.com/superduperstudio?ir=%252Fproduct%252F149000006476&pt=pdp&us=0&src=s&lf=1-0_0&mt=bd&mp=4">AhaLife</a><br/>
   </div>
 
+  <div data-embed_type="product" data-shop="superduperstudiostore.myshopify.com" data-product_name="Saturn Glass" data-product_handle="saturn-glass" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="Add to cart" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="7db461" data-button_text_color="ffffff" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
+  <script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"></script>
+
   <div class="cart-buttons">
     <div class="cart-menu">
       <dl class="dropy">
