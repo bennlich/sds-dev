@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <script type="text/javascript">
-document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
+
+  <head>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+    <!--
+      The docs at https://docs.shopify.com/manual/more/buy-button/add-embed-code#script-tags say
+      to include the div below, but including the div causes "undefined is no longer available"
+      to show up.
+    -->
+    <!-- <div data-embed_type="product" data-shop="superduperstudiostore.myshopify.com"></div> -->
+
+    <!-- shopify script-->
+    <script type="text/javascript">
+  document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
+    </script>
+  </head>
+
+  <body>
+    <!-- I try to embed buttons in both of these divs. -->
+    <div id="first"></div>
+    <div id="second"></div>
+  </body>
+
+  <script>
+    var shopifyBuyButtonHTML = '<div data-embed_type="product" data-shop="superduperstudiostore.myshopify.com" data-product_name="Saturn Glass" data-product_handle="saturn-glass" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="Add to cart" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="7db461" data-button_text_color="ffffff" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>';
+
+    // this one works
+    $("#first").html(shopifyBuyButtonHTML);
+
+    // this one doesn't work? why not? is there a function I can call
+    // in the shopify script to make this work?
+    setTimeout(function() {
+      $("#second").html(shopifyBuyButtonHTML);
+    });
   </script>
-</head>
-
-<body>
-  <div id="first"></div>
-  <div id="second"></div>
-</body>
-
-<script>
-  var shopifyHTML = '<div data-embed_type="product" data-shop="superduperstudiostore.myshopify.com" data-product_name="Saturn Glass" data-product_handle="saturn-glass" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="Add to cart" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="7db461" data-button_text_color="ffffff" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>';
-
-  // this one works
-  $("#first").html(shopifyHTML);
-
-  // this one doesn't work?
-  setTimeout(function() {
-    $("#second").html(shopifyHTML);
-  });
-</script>
 
 </html>
