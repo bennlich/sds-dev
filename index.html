@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SUPER DUPER STUDIO</title>
-  <link rel="stylesheet" type="text/css" href="css/main.css">
   <script src="lib/jquery.js"></script>
-  <script src="lib/js-yaml.min.js"></script>
-  <script src="lib/jsrender.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/router.js"></script>
-
+  <!-- <div data-embed_type="product" data-shop="superduperstudiostore.myshopify.com"></div> -->
   <script type="text/javascript">
-    document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
-  </script>
-  <div data-checkout_button_text="Checkout" data-cart_button_text="Cart" data-button_text_color="ffffff" data-button_background_color="7fb466" data-background_color="ffffff" data-text_color="000000" data-accent_color="767676" data-cart_title="Your Cart" data-discount_notice_text="Shipping and discount codes are added at checkout." data-cart_total_text="Total" data-sticky="true" data-empty_cart_text="Your cart is empty." data-embed_type="cart" data-shop="superduperstudio.myshopify.com"></div>
-  <script type="text/javascript">
-    document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
+document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
   </script>
 </head>
-<body onload="loadHTMLs()">
-  <div id="everything">
-    <div id="nav"></div>
-    <div id="main"></div>
-  </div>
+<body>
+  
 </body>
+<script>
+  // var shopifyHTML = '<div data-embed_type="product" data-shop="superduperstudiostore.myshopify.com" data-product_name="Saturn Glass" data-product_handle="saturn-glass" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="Add to cart" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="7db461" data-button_text_color="ffffff" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>';
+  // var shopifyHTMLSmall = '<div data-embed_type="product" data-shop="superduperstudiostore.myshopify.com"></div>';
+  var shopifyHTML = '<div data-embed_type="product" data-shop="superduperstudiostore.myshopify.com" data-product_name="Saturn Glass" data-product_handle="saturn-glass" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="Add to cart" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="7db461" data-button_text_color="ffffff" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>';
+// <noscript><a href="https://superduperstudiostore.myshopify.com/cart/15985713923:1" target="_blank">Buy Saturn Glass</a></noscript>';
+  $(document.body).html(shopifyHTML);
+</script>
 </html>
