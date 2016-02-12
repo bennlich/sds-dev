@@ -66,6 +66,7 @@ body {
 
 #main-content {
   margin: 0px auto;
+  padding-top: 20px;
 }
 
 /* 1078px + 2 * 60px padding */
@@ -189,17 +190,17 @@ img.greyscale:hover {
   width: 100%;
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
-  font-size: 9pt;
-  line-height: 12pt;
-  letter-spacing: .3px;
+  font-size: 10pt;
+  line-height: 18pt;
+  letter-spacing: 1.3px;
 }
 
 .textBody {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
-  font-size: 9pt;
-  line-height: 12pt;
-  letter-spacing: .3px;
+  font-size: 10pt;
+  line-height: 18pt;
+  letter-spacing: 1.3px;
   position: relative;
   padding-left: 15px;
   height: 481px;
@@ -224,12 +225,12 @@ img.greyscale:hover {
   }
 
   .description-left {
-    width: 206px;
+    width: 309px;
   }
 
   .description-right {
     margin-left: 40px;
-    width: 618px;
+    width: 721px;
   }
 }
 
@@ -243,9 +244,9 @@ bold {
   text-transform: uppercase;
   font-family: 'Roboto Slab', serif;
   font-weight: 500;
-  font-size: 9pt;
-  line-height: 12pt;
-  letter-spacing: .3px;
+  font-size: 10pt;
+  line-height: 18pt;
+  letter-spacing: 1.3px;
 }
 
 .AboutTextWindow {
@@ -269,9 +270,9 @@ bold {
 .MenuText {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
-  font-size: 9pt;
-  line-height: 12pt;
-  letter-spacing: .3px;
+  font-size: 10pt;
+  line-height: 18pt;
+  letter-spacing: 1.3px;
   position: relative;
   max-width: 515px;
   overflow:auto;

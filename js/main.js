@@ -62,11 +62,12 @@ function loadHTMLs() {
     $.get('projects/saturn.yaml'),
     $.get('projects/wassiliscope.yaml'),
     $.get('projects/expandingdimensions.yaml'),
+    $.get('projects/FullerMoon.yaml'),
     $.get('templates/project.tmpl.html'))
     .done(function(backdrop, current, archive, about, cv, bridge,
                    frog, instructions, MFAExhibition, orbitconditions,
-                   pfsc, pips, pluto, satellites, saturn, wassiliscope, expandingdimensions,
-                   projectTemplate) {
+                   pfsc, pips, pluto, satellites, saturn, wassiliscope, expandingdimensions, 
+                   FullerMoon, projectTemplate) {
       HTMLs.backdrop = backdrop[0];
       HTMLs.current = current[0];
       HTMLs.archive = archive[0];
@@ -88,7 +89,7 @@ function loadHTMLs() {
       HTMLs.saturn = render(saturn[0]);
       HTMLs.wassiliscope = render(wassiliscope[0]);
       HTMLs.expandingdimensions = render(expandingdimensions[0]);
-
+      HTMLs.FullerMoon = render(FullerMoon[0]);
       router();
     });
 }
@@ -127,8 +128,8 @@ function bindNavMouseOverEvents() {
 }
 
 var mainDrawings = ["Pics/logo1.svg", "Pics/logo2.svg", "Pics/logo3.svg"];
-var backgroundIMGs = ["Pics/Splash/Saturn_v2.jpg"];
-var backgroundIMGsMobile = ["Pics/Splash/HomepagePortrait.jpg"];
+var backgroundIMGs = ["Pics/Splash/FullerMoonHomepage.jpg"];
+var backgroundIMGsMobile = ["Pics/Splash/FullerMoonHomepagePortrait.jpg"];
 var mainDrawing = null;
 var bgImage = null;
 var random = null;
@@ -141,8 +142,16 @@ function thisIsAPhone() {
 function getRandomBackgroundImg() {
   if (thisIsAPhone()) {
     return backgroundIMGsMobile[Math.floor(Math.random()*backgroundIMGsMobile.length)];
+    //change text color for dark background images
+    // if(backgroundIMGsMobile() == 2){
+    //   $("#nav").attr('color', #FFFFFF);
+    // };
   }
   return backgroundIMGs[Math.floor(Math.random()*backgroundIMGs.length)];
+  // //change text color for dark background images
+  // if(backgroundIMGsMobile() == 2){
+  //     $("#nav").attr('color', #FFFFFF);
+  //   };
 }
 
 function selectDrawing() {
@@ -214,7 +223,8 @@ function preloader() {
     "Pics/Saturn/preview_v4.jpg",
     "Pics/Bridge/preview.jpg",
     "Pics/PFSC/preview.jpg",
-    "Pics/blogPreview.svg"
+    "Pics/blogPreview.svg",
+    "Pics/FullerMoon/Preview.jpg"
   ];
   // missing images
   // previews[3]="Pics/ProcessDrawings/preview.jpg";
