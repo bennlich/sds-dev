@@ -13,7 +13,15 @@
   -webkit-align-items: center;
   align-items: center;
 }
-
+#navbackground{
+  background-color: #ffffff;
+  width: 100%;
+  height: 129px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -100;
+}
 @media (max-width: 400px) {
   .nav-wrapper {
     margin: 0px auto;
@@ -40,7 +48,8 @@
 
 #superduperstudio {
   display: inline-block;  
-  height: 144px;
+  height: 93px;
+  padding-right: 60px;
 }
 
 .navText {
