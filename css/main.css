@@ -250,7 +250,7 @@ bold {
 }
 
 .AboutTextWindow {
-  max-width: 515px;
+  max-width: 693px;
   height: 481px;
 }
 
@@ -274,7 +274,7 @@ bold {
   line-height: 18pt;
   letter-spacing: 1.3px;
   position: relative;
-  max-width: 515px;
+  max-width: 693px;
   overflow:auto;
 }
 
