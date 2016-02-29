@@ -1,8 +1,8 @@
 carouselContent: >-
-  <div><img src="Pics/FullerMoon/Study13b.jpg"></div>
-  <div><img src="Pics/FullerMoon/Study13bDetail1.jpg"></div>
-  <div><img src="Pics/FullerMoon/Study13ContetShot.jpg"></div>
-
+  <div><img src="Pics/FullerMoon/Study13b.jpg" height="100%"></div>
+  <div><img src="Pics/FullerMoon/Context2.jpg" height="100%"></div>
+  <div><img src="Pics/FullerMoon/Study13bDetail1.jpg" height="100%"></div>
+  <div><img src="Pics/FullerMoon/Study13ContetShot.jpg" height="100%"></div>
 
 descriptionLeftContent: >-
   <div>
@@ -17,7 +17,6 @@ descriptionLeftContent: >-
     <bold>$1250 each</bold><br/>
     Release Date: March 11
   </div>
-
   <div class="cart-buttons">
     <div data-embed_type="product" data-shop="superduperstudiostore.myshopify.com" data-product_name="Fuller Moon" data-product_handle="fuller-moon" data-has_image="false" data-display_size="compact" data-redirect_to="cart" data-buy_button_text="Pre-order now" data-buy_button_out_of_stock_text="Out of Stock" data-buy_button_product_unavailable_text="Unavailable" data-button_background_color="7db461" data-button_text_color="ffffff" data-product_modal="false" data-product_title_color="000000" data-next_page_button_text="Next page"></div>
     <script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"></script>

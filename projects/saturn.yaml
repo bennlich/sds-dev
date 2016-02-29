@@ -2,16 +2,15 @@ carouselContent: >-
   <div>
     <div class="video-wrapper">
       <iframe src="//player.vimeo.com/video/110661829?loop=1" width="747" height="481" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      <div class="swipeable-overlay"></div>
+      <div class="swipeable-overlay" height="100%"></div>
     </div>
   </div>
-  <div><img src="Pics/Saturn/Saturn1.jpg"></div>
-  <div><img src="Pics/Saturn/Saturn2.jpg"></div>
-  <div><img src="Pics/Saturn/Saturn3.jpg"></div>
-  <div><img src="Pics/Saturn/Saturn4.jpg"></div>
-  <div><img src="Pics/Saturn/Saturn5.jpg"></div>
-  <div><img src="Pics/Saturn/MoldBlowing.jpg"></div>
-  <!-- <div><img src="Pics/Saturn/concept.jpg"></div> -->
+  <div><img src="Pics/Saturn/Saturn1.jpg" height="100%"></div>
+  <div><img src="Pics/Saturn/Saturn2.jpg" height="100%"></div>
+  <div><img src="Pics/Saturn/Saturn3.jpg" height="100%"></div>
+  <div><img src="Pics/Saturn/Saturn4.jpg" height="100%"></div>
+  <div><img src="Pics/Saturn/Saturn5.jpg" height="100%"></div>
+  <div><img src="Pics/Saturn/MoldBlowing.jpg" height="100%"></div>
 
 descriptionLeftContent: >-
   <div>
