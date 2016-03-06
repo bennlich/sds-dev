@@ -12,7 +12,14 @@ function router () {
   // Lazy load view element:
   el = el || $('#main');
   // Current route url (getting rid of '#' in hash as well):
-  var url = location.hash.slice(1) || '/';
+  var url = "/";
+  // The regular expression below matches <stuff> in strings
+  // that look like #<stuff> or #!<stuff>
+  var urlRegex = /#!?(.*)/;
+  var urlMatches = urlRegex.exec(location.hash);
+  if (urlMatches && urlMatches.length > 1) {
+    url = urlMatches[1];
+  }
   // Get route by url:
   // var route = routes[url];
   // Do we have a route?
